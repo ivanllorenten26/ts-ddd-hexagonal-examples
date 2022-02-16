@@ -1,0 +1,15 @@
+{
+  "name": "hexjs",
+  "version": "1.0.0",
+  "description": "Example of hexagonal architecture in a frontend project",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "author": "ivan.llorente@n26.com",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "yarn workspaces run dev -p"
+  }
+}
