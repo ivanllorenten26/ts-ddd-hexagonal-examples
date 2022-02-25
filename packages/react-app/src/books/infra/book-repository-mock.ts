@@ -1,5 +1,5 @@
 import { Book } from "../domain/book";
-import { BookRepository } from "../domain/book-repository";
+import { BookRepository } from "./book-repository";
 
 export class BookRepositoryMock implements BookRepository {
   getAll(): Book[] {

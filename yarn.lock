@@ -19,6 +19,15 @@
     jsonpointer "^5.0.0"
     leven "^3.1.0"
 
+"@apollo/federation@0.35.1":
+  version "0.35.1"
+  resolved "https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@apollo/federation/-/federation-0.35.1.tgz#8715731ad66b96cfdaa2b0408ea5f16839785542"
+  integrity sha512-8c9coGmulfgf6/lXfPigf+IpLFR5o9RoEynbfz3FIdTynRyGBO8iszjA6lBRUmcRX0HD1ihvnii71QnQk6DX4A==
+  dependencies:
+    "@apollo/subgraph" "^0.3.1"
+    apollo-server-types "^3.0.2"
+    lodash.xorby "^4.7.0"
+
 "@apollo/protobufjs@1.2.2":
   version "1.2.2"
   resolved "https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@apollo/protobufjs/-/protobufjs-1.2.2.tgz#4bd92cd7701ccaef6d517cdb75af2755f049f87c"
@@ -37,6 +46,11 @@
     "@types/long" "^4.0.0"
     "@types/node" "^10.1.0"
     long "^4.0.0"
+
+"@apollo/subgraph@0.3.1", "@apollo/subgraph@^0.3.1":
+  version "0.3.1"
+  resolved "https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@apollo/subgraph/-/subgraph-0.3.1.tgz#33e2ca8f87a8b0bb988888de794361db04cedd95"
+  integrity sha512-MWqzfZEcvN86iwwgsgkFnkoBvv/wCdw/qyXjayuZ4wwQgVZ8NpFNbUxjRC0MwKNHwBU/ZH1oDHOnC8WbUuUMsg==
 
 "@apollographql/apollo-tools@^0.5.1":
   version "0.5.2"
@@ -2937,7 +2951,7 @@ apollo-server-plugin-base@^3.5.1:
   dependencies:
     apollo-server-types "^3.5.1"
 
-apollo-server-types@^3.5.1:
+apollo-server-types@^3.0.2, apollo-server-types@^3.5.1:
   version "3.5.1"
   resolved "https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/apollo-server-types/-/apollo-server-types-3.5.1.tgz#73fc8aa82b3175fde3906fa3d6786ee4d3e8c982"
   integrity sha1-c/yKqCsxdf3jkG+j1nhu5NPoyYI=
@@ -6390,6 +6404,11 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
+
+lodash.xorby@^4.7.0:
+  version "4.7.0"
+  resolved "https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/lodash.xorby/-/lodash.xorby-4.7.0.tgz#9c19a6f9f063a6eb53dd03c1b6871799801463d7"
+  integrity sha1-nBmm+fBjputT3QPBtocXmYAUY9c=
 
 lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.7.0:
   version "4.17.21"

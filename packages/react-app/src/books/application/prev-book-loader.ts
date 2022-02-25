@@ -1,4 +1,4 @@
-import { BookRepository } from "../domain/book-repository";
+import { BookRepository } from "../infra/book-repository";
 import { BookViewer } from "../domain/book-viewer.aggregate-root";
 import { BookRepositoryMock } from "../infra/book-repository-mock";
 import { UseCase } from "./usecase";

@@ -1,5 +1,5 @@
 import { Book } from "./book";
-import { BookRepository } from "./book-repository";
+import { BookRepository } from "../infra/book-repository";
 
 export class BookViewer {
   private _books: Book[];
