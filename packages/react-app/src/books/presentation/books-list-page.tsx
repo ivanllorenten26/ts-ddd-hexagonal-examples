@@ -1,43 +1,40 @@
-import React, { useState } from "react";
-import { BooksFetcher } from "../application/books-fetcher";
 import { NextBookLoader } from "../application/next-book-loader";
 import { PrevBookLoader } from "../application/prev-book-loader";
-import { BookViewer } from "../domain/book-viewer.aggregate-root";
-
-const getInitialState: () => BookViewer = () => {
-  const cmd = new BooksFetcher();
-  return cmd.run();
-  // return viewer;
-};
+import useBookViewer from "./hooks/use-get-books";
 
 const BooksListPage = () => {
-  const [viewer, setViewer] = useState<BookViewer>(getInitialState());
+  const { isLoading, viewer, setViewer } = useBookViewer();
 
-  const handlePrev = () => {
+  const handlePrev = async () => {
+    if (!viewer) return;
     const cmd = new PrevBookLoader(viewer);
-    setViewer(cmd.run());
+    setViewer(await cmd.run());
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
+    if (!viewer) return;
     const cmd = new NextBookLoader(viewer);
-    setViewer(cmd.run());
+    setViewer(await cmd.run());
   };
+
+  if (isLoading) <div>Loading</div>;
+  // if (!viewer) <div>Error loading books</div>;
 
   return (
     <>
       <h1>Books list page</h1>
       <div>
         {/* <button onClick={handleFetch}>Load Books</button> */}
-        <button onClick={handlePrev} disabled={!viewer.isPrevEnabled()}>
+        <button onClick={handlePrev} disabled={!viewer?.isPrevEnabled()}>
           Prev
         </button>
-        <button onClick={handleNext} disabled={!viewer.isNextEnabled()}>
+        <button onClick={handleNext} disabled={!viewer?.isNextEnabled()}>
           Next
         </button>
       </div>
       <div>
-        <div>{viewer.getCurrentBook()?.id}</div>
-        <div>{viewer.getCurrentBook()?.title}</div>
+        <div>{viewer?.getCurrentBook()?.id}</div>
+        <div>{viewer?.getCurrentBook()?.title}</div>
       </div>
     </>
   );

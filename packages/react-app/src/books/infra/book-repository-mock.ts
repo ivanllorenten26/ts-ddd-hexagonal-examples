@@ -1,9 +1,9 @@
 import { Book } from "../domain/book";
-import { BookRepository } from "./book-repository";
+import { BookRepository } from "../domain/book-repository";
 
 export class BookRepositoryMock implements BookRepository {
-  getAll(): Book[] {
-    return [
+  getAll(): Promise<Book[]> {
+    return Promise.resolve([
       {
         id: 1,
         title: "The new Avengers",
@@ -16,6 +16,6 @@ export class BookRepositoryMock implements BookRepository {
         id: 3,
         title: "STAR WARS. THE HIGH REPUBLIC: Rising storm",
       },
-    ];
+    ]);
   }
 }

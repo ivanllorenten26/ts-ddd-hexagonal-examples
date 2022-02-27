@@ -1,5 +1,5 @@
 import { Book } from "./book";
-import { BookRepository } from "../infra/book-repository";
+import { BookRepository } from "./book-repository";
 
 export class BookViewer {
   private _books: Book[];
@@ -48,7 +48,7 @@ export class BookViewer {
     if (this.isPrevEnabled()) this._index = this.index - 1;
   }
 
-  public getAll(): void {
-    this._books = this._repository.getAll();
+  public async getAll(): Promise<void> {
+    this._books = await this._repository.getAll();
   }
 }

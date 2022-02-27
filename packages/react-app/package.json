@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "3.5.9",
     "@nextui-org/react": "1.0.2-beta.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

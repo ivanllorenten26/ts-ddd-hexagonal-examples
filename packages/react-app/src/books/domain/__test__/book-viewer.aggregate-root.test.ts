@@ -123,9 +123,9 @@ describe("BookViewer", () => {
   });
 
   describe("getAll", () => {
-    test("should return 3 books", () => {
+    test("should return 3 books", async () => {
       const viewer = BookViewer.create([], 0, new BookRepositoryMock());
-      viewer.getAll();
+      await viewer.getAll();
       expect(viewer.books).toHaveLength(3);
     });
   });
