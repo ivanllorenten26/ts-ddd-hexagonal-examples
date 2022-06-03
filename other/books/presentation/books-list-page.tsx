@@ -1,6 +1,8 @@
-import { NextBookLoader } from "../application/next-book-loader";
-import { PrevBookLoader } from "../application/prev-book-loader";
-import useBookViewer from "./hooks/use-get-books";
+import React from 'react';
+
+import { NextBookLoader } from '../application/next-book-loader';
+import { PrevBookLoader } from '../application/prev-book-loader';
+import useBookViewer from './hooks/use-get-books';
 
 const BooksListPage = () => {
   const { isLoading, viewer, setViewer } = useBookViewer();
@@ -25,31 +27,16 @@ const BooksListPage = () => {
       <h1>Books list page</h1>
       <div>
         {/* <button onClick={handleFetch}>Load Books</button> */}
-        <button
-          data-testid="prev-button"
-          onClick={handlePrev}
-          disabled={!viewer?.isPrevEnabled()}
-        >
+        <button onClick={handlePrev} disabled={!viewer?.isPrevEnabled()}>
           Prev
         </button>
-        <button
-          data-testid="next-button"
-          onClick={handleNext}
-          disabled={!viewer?.isNextEnabled()}
-        >
+        <button onClick={handleNext} disabled={!viewer?.isNextEnabled()}>
           Next
         </button>
       </div>
       <div>
         <div>{viewer?.getCurrentBook()?.id}</div>
         <div>{viewer?.getCurrentBook()?.title}</div>
-        <div>
-          <img
-            width="400"
-            src={viewer?.getCurrentBook()?.cover}
-            alt={viewer?.getCurrentBook()?.cover}
-          />
-        </div>
       </div>
     </>
   );

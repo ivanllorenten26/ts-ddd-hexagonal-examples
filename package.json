@@ -10,7 +10,6 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "yarn dev --all -p",
-    "dev": "echo "
+    "start": "yarn dev --all -p"
   }
 }

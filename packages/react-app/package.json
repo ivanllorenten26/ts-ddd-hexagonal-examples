@@ -20,13 +20,19 @@
     "@types/node": "16.11.22",
     "@types/react": "17.0.38",
     "@types/react-dom": "17.0.11",
-    "@types/react-router-dom": "5.3.3"
+    "@types/react-router-dom": "5.3.3",
+    "cypress": "^9.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-testing-library": "^4.0.0",
+    "jest-cucumber": "^3.0.1"
   },
   "scripts": {
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:e2e": "cypress open",
+    "cypress:integration": ""
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }
